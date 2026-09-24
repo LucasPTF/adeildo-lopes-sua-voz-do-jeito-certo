@@ -1,0 +1,142 @@
+export type Hero = {
+  kicker?: string;
+  title: string;
+  paragraphs: string[];
+  cta: string;
+  detail?: string;
+};
+
+export const heroes: Record<"a1" | "a2" | "a3", Hero> = {
+  a1: {
+    kicker: "PARA QUEM AMA CANTAR, MAS NÃO GOSTA DE SE OUVIR GRAVADO",
+    title: "Sua voz merece ser ouvida direito.",
+    paragraphs: [
+      "Em uma noite ao vivo, o Maestro Adeildo Lopes mostra por que uma gravação crua de celular não deve ser o veredito sobre a sua voz — e conduz demonstrações práticas para você ouvir o que muda quando entram direção, tom e tratamento de áudio.",
+    ],
+    cta: "QUERO PARTICIPAR POR R$29,90",
+    detail: "Ao vivo · 19h30 às 22h · investimento de R$29,90",
+  },
+  a2: {
+    title: "Ainda dá tempo de cantar.",
+    paragraphs: [
+      "Tem gente voltando a cantar aos 50, 60, 70 anos — não para virar estrela, mas porque a música continuou ali. Se a dúvida é “será que passei da idade?”, esta noite foi desenhada para trocar a comparação com os outros por uma experiência prática com a sua própria voz.",
+      "O Maestro Adeildo Lopes conduz demonstrações ao vivo e mostra por que idade, falta de equipamento e um áudio ruim de celular não precisam encerrar uma história que você ainda quer viver.",
+      "Uma noite. Uma gravação simples. Uma nova referência para decidir o que fazer com a sua voz.",
+    ],
+    cta: "QUERO PARTICIPAR POR R$29,90",
+  },
+  a3: {
+    title: "A música da sua vida, na sua voz.",
+    paragraphs: [
+      "Tem música que começa e traz de volta uma estrada inteira: uma casa, uma festa, um amor, um domingo em família, um modão que todo mundo sabia cantar. O problema é que muita gente guarda essa música por anos e nunca se permite ouvir uma versão própria bem produzida.",
+      "No workshop “Sua Voz do Jeito Certo”, o Maestro Adeildo Lopes mostra como sair do áudio improvisado do celular e entender o caminho de uma gravação dirigida — com tom, interpretação e tratamento colocados a serviço da sua voz.",
+      "Não é sobre cantar igual ao artista. É sobre ouvir aquela música importante do jeito que só você pode contar.",
+    ],
+    cta: "QUERO PARTICIPAR POR R$29,90",
+  },
+};
+
+export const scene = {
+  kicker: "TALVEZ A CENA SEJA FAMILIAR",
+  title: "Você canta em casa. Aí grava no celular e desanima.",
+  paragraphs: [
+    "No banho, no carro, no louvor, no karaokê ou naquela música que você conhece de memória, cantar pode ser um prazer. Mas basta apertar “gravar”, ouvir o áudio cru e pensar: “Essa voz é minha mesmo?”",
+    "Muita gente para aí. Não porque deixou de gostar de música, mas porque julgou a própria voz comparando um registro simples de celular com músicas que passaram por escolha de tom, direção, captação, edição, mixagem e masterização.",
+  ],
+  statement: "O áudio cru do celular é um ponto de partida. Não precisa ser a sentença final sobre a sua voz.",
+};
+
+export const comparison = {
+  title: "O erro não é gostar de cantar. É se comparar do jeito errado.",
+  paragraphs: [
+    "Quando você ouve um artista no rádio ou no streaming, não está ouvindo apenas “uma pessoa cantando”. Está ouvindo uma performance dirigida e uma produção finalizada. Se você grava uma tomada sem orientação, em qualquer ambiente, e coloca lado a lado com um disco pronto, a comparação já nasce desequilibrada.",
+    "O workshop “Sua Voz do Jeito Certo” foi criado para mostrar essa diferença na prática, sem exigir que você vire cantor profissional, compre equipamento ou passe meses estudando antes de começar.",
+  ],
+};
+
+export const method = {
+  title: "O método da noite: Gravar → Dirigir → Comparar",
+  steps: [
+    "Gravar: partir de uma frase simples registrada no celular, sem fingir que ela já é um produto final.",
+    "Dirigir: ajustar interpretação, respiração, intenção e tom para a música caber melhor na voz da pessoa.",
+    "Comparar: ouvir o antes e o depois com tratamento de áudio, entendendo o que é voz, o que é direção e o que é produção.",
+  ],
+  closing: "O objetivo não é fabricar uma voz que não existe. É mostrar como a mesma pessoa pode soar muito diferente quando deixa de cantar no escuro e recebe direção de quem trabalha com gravação há décadas.",
+};
+
+export const schedule = {
+  title: "O que acontece em 2h30 ao vivo",
+  items: [
+    "Bloco 1 — 30 min: três crenças que fazem muita gente desistir antes de tentar: “meu celular provou que minha voz é ruim”, “já passou da minha idade” e “eu não nasci com dom”.",
+    "Bloco 2 — 60 min: três participantes são dirigidos ao vivo pelo Maestro. Cada um grava uma frase no celular e a turma acompanha a diferença depois da orientação e do tratamento.",
+    "Bloco 3 — 30 min: como escolher uma música que faça sentido para a sua história e para a sua voz, e como preparar uma gravação remota em casa.",
+    "Bloco final — 30 min: próximos passos para quem quiser sair do teste e transformar uma música importante em uma gravação completa.",
+  ],
+};
+
+export const audience = {
+  forTitle: "Para quem é",
+  forItems: [
+    "Para quem canta em casa, na igreja, no karaokê ou só quando ninguém está olhando.",
+    "Para quem gosta da própria voz ao vivo, mas se decepciona quando ouve uma gravação.",
+    "Para quem sempre quis gravar uma música, mas nunca soube por onde começar.",
+    "Para quem se pergunta se ainda dá tempo de aprender, melhorar ou simplesmente viver essa experiência.",
+    "Para quem quer orientação prática, sem a obrigação de entrar numa carreira musical.",
+  ],
+  notTitle: "Para quem não é",
+  notItems: [
+    "Para quem procura promessa de fama, contrato artístico ou resultado garantido.",
+    "Para quem espera uma formação completa de técnica vocal em uma única noite.",
+    "Para quem não quer participar ao vivo nem acompanhar demonstrações práticas.",
+  ],
+};
+
+export const authority = {
+  title: "Quem conduz",
+  paragraphs: [
+    "Maestro Adeildo Lopes é produtor musical, arranjador, músico e professor com mais de 30 anos de atuação em estúdio e palco. Ao longo da carreira, trabalhou na Banda do Faustão e participou de projetos com grandes nomes da música brasileira. No Voz Eterna, essa experiência é trazida para a pessoa comum: alguém que talvez nunca tenha entrado em estúdio, mas tem uma música que gostaria de ouvir na própria voz.",
+    "Aqui, a prova central não é uma promessa: é a demonstração ao vivo do processo.",
+  ],
+};
+
+export const offer = {
+  title: "O que você recebe ao entrar",
+  items: [
+    "Participação no workshop ao vivo “Sua Voz do Jeito Certo”.",
+    "2h30 de encontro com demonstrações e direção de participantes.",
+    "A explicação prática do processo Gravar → Dirigir → Comparar.",
+    "Orientação para escolher uma música adequada à sua voz e à sua história.",
+    "Passo a passo de como preparar e enviar uma gravação feita em casa.",
+  ],
+  investment: "Investimento: R$29,90.",
+  note: "No checkout, poderão aparecer materiais opcionais de apoio. Eles não são necessários para participar do workshop.",
+  cta: "QUERO PARTICIPAR POR R$29,90",
+};
+
+export const result = {
+  title: "O que muda quando alguém finalmente escuta sem se condenar",
+  paragraphs: [
+    "Talvez a sua voz não vire carreira. Talvez você nem queira isso. Mas existe uma diferença grande entre desistir porque um áudio cru te assustou e decidir depois de entender como uma gravação é construída.",
+    "A proposta desta noite é simples: antes de decretar “minha voz gravada é horrível”, veja o processo por dentro. Ouça a diferença. Entenda o que pode ser ajustado. E, só então, decida o que quer fazer com a música que está guardada aí há anos.",
+  ],
+};
+
+export const faq = {
+  title: "Perguntas frequentes",
+  items: [
+    ["Preciso saber cantar?", "Não. O workshop foi desenhado para pessoas comuns, inclusive quem nunca estudou canto. A proposta é demonstrar direção e produção, não exigir nível técnico prévio."],
+    ["Preciso de microfone ou equipamento?", "Não para acompanhar o workshop. As demonstrações partem de gravações simples de celular."],
+    ["Vou sair cantando perfeitamente em uma noite?", "Não é essa a promessa. Você vai entender o processo, acompanhar demonstrações e aprender o que muda quando uma voz recebe direção e tratamento."],
+    ["É aula de canto?", "Há orientação vocal e musical dentro da demonstração, mas o foco da noite é mostrar a diferença entre um registro cru e uma gravação dirigida, além de apresentar o caminho para quem deseja gravar uma música."],
+    ["Tenho vergonha de cantar na frente de outras pessoas. Preciso me expor?", "Não. Apenas alguns participantes serão conduzidos ao vivo. Acompanhar o encontro já permite entender o processo."],
+    ["Serve para gospel, sertanejo, MPB e outros estilos?", "Sim. O princípio de direção e gravação pode ser aplicado a diferentes repertórios. A escolha da música precisa respeitar a voz e a intenção de cada pessoa."],
+    ["Qual é o horário?", "Das 19h30 às 22h, em uma noite ao vivo."],
+  ] as const,
+  cta: "QUERO OUVIR MINHA VOZ COM OUTROS OUVIDOS",
+};
+
+export const lots = [
+  { name: "Lote 1", price: "R$ 29,90", state: "Lote vigente", current: true },
+  { name: "Lote 2", price: "R$ 79,90", state: "Lote seguinte", current: false },
+  { name: "Lote 3", price: "R$ 149,90", state: "Lote seguinte", current: false },
+] as const;
