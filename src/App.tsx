@@ -1,16 +1,19 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import {
   audience,
+  audioComparisonSources,
   authority,
   comparison,
   faq,
   heroes,
+  heroAuthority,
   lots,
   method,
   offer,
   result,
   scene,
   schedule,
+  workshopDetails,
 } from "./content";
 
 const appRoutes = ["/a1", "/a2", "/a3", "/obrigado"] as const;
@@ -171,19 +174,38 @@ function Header() {
 
 function HeroSection({ route }: { route: RouteKey }) {
   const hero = heroes[route];
+  const selectedVersion = route === "a3";
   return (
-    <section className="hero" id="top">
+    <section className={`hero${selectedVersion ? " hero-selected" : ""}`} id="top">
       <div className="hero-glow" aria-hidden="true" />
       <div className="hero-copy">
         {hero.kicker && <p className="eyebrow hero-item">{hero.kicker}</p>}
         <h1 className="hero-item">{hero.title}</h1>
-        <div className="hero-paragraphs hero-item">
-          {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
-        </div>
+        {selectedVersion ? (
+          <>
+            <div className="workshop-summary hero-item" role="group" aria-label="Informações do workshop">
+              <p className="workshop-format">{workshopDetails.format}</p>
+              <div className="workshop-facts">
+                <span>{workshopDetails.duration}</span>
+                <span>{workshopDetails.time}</span>
+                <strong>{workshopDetails.price}</strong>
+              </div>
+              {workshopDetails.date && <p className="workshop-date">{workshopDetails.date}</p>}
+            </div>
+            <div className="hero-action hero-item"><CTA label={hero.cta} /></div>
+            <p className="hero-authority hero-item">{heroAuthority}</p>
+          </>
+        ) : (
+          <div className="hero-paragraphs hero-item">
+            {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+          </div>
+        )}
+        {!selectedVersion && (
         <div className="hero-action hero-item">
           <CTA label={hero.cta} />
           {hero.detail && <p>{hero.detail}</p>}
         </div>
+        )}
       </div>
       <div className="hero-visual hero-item">
         <figure className="hero-photo">
@@ -199,6 +221,11 @@ function HeroSection({ route }: { route: RouteKey }) {
           </div>
         </figure>
       </div>
+      {selectedVersion && (
+        <div className="hero-story hero-paragraphs">
+          {hero.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
+        </div>
+      )}
     </section>
   );
 }
@@ -230,7 +257,28 @@ function ComparisonSection() {
         <h2>{comparison.title}</h2>
         {comparison.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}
       </div>
+      <AudioComparison />
     </section>
+  );
+}
+
+function AudioComparison() {
+  const beforeRef = useRef<HTMLAudioElement>(null);
+  const afterRef = useRef<HTMLAudioElement>(null);
+  if (!audioComparisonSources) return null;
+  return (
+    <div className="audio-comparison" role="group" aria-label="Áudio antes e depois">
+      <div className="audio-sample">
+        <h3 id="audio-before">Áudio de celular</h3>
+        <audio controls preload="none" ref={beforeRef} aria-labelledby="audio-before"
+          src={audioComparisonSources.before} onPlay={() => afterRef.current?.pause()} />
+      </div>
+      <div className="audio-sample audio-sample-directed">
+        <h3 id="audio-after">O mesmo trecho com direção</h3>
+        <audio controls preload="none" ref={afterRef} aria-labelledby="audio-after"
+          src={audioComparisonSources.after} onPlay={() => beforeRef.current?.pause()} />
+      </div>
+    </div>
   );
 }
 
@@ -340,10 +388,10 @@ function OfferSection() {
       </div>
       <div className="lots" role="list" aria-label="Comparação de lotes">
         {lots.map((lot) => (
-          <article role="listitem" key={lot.name} className={lot.current ? "lot lot-current" : "lot"} aria-current={lot.current ? "true" : undefined}>
+          <div role="listitem" key={lot.name} className={lot.current ? "lot lot-current" : "lot"} aria-current={lot.current ? "true" : undefined}>
             <div><p>{lot.name}</p><span>{lot.state}</span></div>
             <strong>{lot.price}</strong>
-          </article>
+          </div>
         ))}
       </div>
     </section>

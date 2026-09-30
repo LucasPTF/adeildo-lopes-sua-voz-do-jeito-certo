@@ -11,7 +11,7 @@
     "O Maestro Adeildo Lopes conduz demonstrações ao vivo e mostra por que idade, falta de equipamento e um áudio ruim de celular não precisam encerrar uma história que você ainda quer viver.",
     "Uma noite. Uma gravação simples. Uma nova referência para decidir o que fazer com a sua voz.",
     "A música da sua vida, na sua voz.",
-    "Tem música que começa e traz de volta uma estrada inteira: uma casa, uma festa, um amor, um domingo em família, um modão que todo mundo sabia cantar. O problema é que muita gente guarda essa música por anos e nunca se permite ouvir uma versão própria bem produzida.",
+    "Tem música que começa e traz de volta uma estrada inteira: uma casa, uma festa, um amor, um domingo em família, um modão que todo mundo sabia cantar. O problema é que muita gente guarda essa música por anos e nunca descobriu como a própria voz pode soar nela.",
     "No workshop “Sua Voz do Jeito Certo”, o Maestro Adeildo Lopes mostra como sair do áudio improvisado do celular e entender o caminho de uma gravação dirigida — com tom, interpretação e tratamento colocados a serviço da sua voz.",
     "Não é sobre cantar igual ao artista. É sobre ouvir aquela música importante do jeito que só você pode contar.",
     "QUERO PARTICIPAR POR R$29,90",
@@ -32,7 +32,7 @@
     "Bloco 1 — 30 min: três crenças que fazem muita gente desistir antes de tentar: “meu celular provou que minha voz é ruim”, “já passou da minha idade” e “eu não nasci com dom”.",
     "Bloco 2 — 60 min: três participantes são dirigidos ao vivo pelo Maestro. Cada um grava uma frase no celular e a turma acompanha a diferença depois da orientação e do tratamento.",
     "Bloco 3 — 30 min: como escolher uma música que faça sentido para a sua história e para a sua voz, e como preparar uma gravação remota em casa.",
-    "Bloco final — 30 min: próximos passos para quem quiser sair do teste e transformar uma música importante em uma gravação completa.",
+    "Bloco final — 30 min: A sua música da vida. Nos últimos 30 minutos, eu mostro como uma música importante para você vira uma gravação de verdade: o passo a passo e como funciona a gravação dirigida por mim. Quem sentir que chegou a hora recebe o convite para gravar a sua primeira música. Quem ainda não estiver pronto sai com clareza do próximo passo, sem pressão.",
     "Para quem é",
     "Para quem canta em casa, na igreja, no karaokê ou só quando ninguém está olhando.",
     "Para quem gosta da própria voz ao vivo, mas se decepciona quando ouve uma gravação.",
@@ -80,5 +80,14 @@
     "Lote 3",
     "R$ 149,90"
   ],
+  "requiredByRoute": {
+    "/a3": [
+      "Workshop ao vivo",
+      "2h30",
+      "19h30 às 22h",
+      "R$29,90",
+      "Quem dirige: o Maestro que tocou na banda do Faustão, foi Maestro do Miss Brasil na TV Band e gravou com Daniel, Leonardo, entre outros."
+    ]
+  },
   "obsoleteText": []
 }

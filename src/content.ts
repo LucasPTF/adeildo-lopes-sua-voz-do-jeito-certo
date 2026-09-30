@@ -28,13 +28,26 @@ export const heroes: Record<"a1" | "a2" | "a3", Hero> = {
   a3: {
     title: "A música da sua vida, na sua voz.",
     paragraphs: [
-      "Tem música que começa e traz de volta uma estrada inteira: uma casa, uma festa, um amor, um domingo em família, um modão que todo mundo sabia cantar. O problema é que muita gente guarda essa música por anos e nunca se permite ouvir uma versão própria bem produzida.",
+      "Tem música que começa e traz de volta uma estrada inteira: uma casa, uma festa, um amor, um domingo em família, um modão que todo mundo sabia cantar. O problema é que muita gente guarda essa música por anos e nunca descobriu como a própria voz pode soar nela.",
       "No workshop “Sua Voz do Jeito Certo”, o Maestro Adeildo Lopes mostra como sair do áudio improvisado do celular e entender o caminho de uma gravação dirigida — com tom, interpretação e tratamento colocados a serviço da sua voz.",
       "Não é sobre cantar igual ao artista. É sobre ouvir aquela música importante do jeito que só você pode contar.",
     ],
     cta: "QUERO PARTICIPAR POR R$29,90",
   },
 };
+
+export const workshopDetails = {
+  format: "Workshop ao vivo",
+  duration: "2h30",
+  time: "19h30 às 22h",
+  price: "R$29,90",
+  date: null as string | null,
+};
+
+export const heroAuthority = "Quem dirige: o Maestro que tocou na banda do Faustão, foi Maestro do Miss Brasil na TV Band e gravou com Daniel, Leonardo, entre outros.";
+
+export type AudioComparisonSources = { before: string; after: string };
+export const audioComparisonSources: AudioComparisonSources | null = null;
 
 export const scene = {
   kicker: "TALVEZ A CENA SEJA FAMILIAR",
@@ -70,7 +83,7 @@ export const schedule = {
     "Bloco 1 — 30 min: três crenças que fazem muita gente desistir antes de tentar: “meu celular provou que minha voz é ruim”, “já passou da minha idade” e “eu não nasci com dom”.",
     "Bloco 2 — 60 min: três participantes são dirigidos ao vivo pelo Maestro. Cada um grava uma frase no celular e a turma acompanha a diferença depois da orientação e do tratamento.",
     "Bloco 3 — 30 min: como escolher uma música que faça sentido para a sua história e para a sua voz, e como preparar uma gravação remota em casa.",
-    "Bloco final — 30 min: próximos passos para quem quiser sair do teste e transformar uma música importante em uma gravação completa.",
+    "Bloco final — 30 min: A sua música da vida. Nos últimos 30 minutos, eu mostro como uma música importante para você vira uma gravação de verdade: o passo a passo e como funciona a gravação dirigida por mim. Quem sentir que chegou a hora recebe o convite para gravar a sua primeira música. Quem ainda não estiver pronto sai com clareza do próximo passo, sem pressão.",
   ],
 };
 
